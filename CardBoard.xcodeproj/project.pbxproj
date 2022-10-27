@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15BDDBB78A2662A59877D087 /* Pods_CardBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB15D83DD7340AFEEC2155B /* Pods_CardBoard.framework */; };
 		A80D5CF92908AC6F00317904 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80D5CF82908AC6F00317904 /* AppDelegate.swift */; };
 		A80D5CFB2908AC6F00317904 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80D5CFA2908AC6F00317904 /* SceneDelegate.swift */; };
 		A80D5CFD2908AC6F00317904 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80D5CFC2908AC6F00317904 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7DB15D83DD7340AFEEC2155B /* Pods_CardBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B1477FA9789756965F793F9 /* Pods-CardBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBoard.debug.xcconfig"; path = "Target Support Files/Pods-CardBoard/Pods-CardBoard.debug.xcconfig"; sourceTree = "<group>"; };
 		A80D5CF52908AC6F00317904 /* CardBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80D5CF82908AC6F00317904 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A80D5CFA2908AC6F00317904 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,8 @@
 		A80D5D012908AC7100317904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A80D5D042908AC7100317904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A80D5D062908AC7100317904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A80D5D0C2908BA3E00317904 /* CardBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardBoard.entitlements; sourceTree = "<group>"; };
+		BC9162B93097052CCAE2C408 /* Pods-CardBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBoard.release.xcconfig"; path = "Target Support Files/Pods-CardBoard/Pods-CardBoard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BDDBB78A2662A59877D087 /* Pods_CardBoard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CBFAC2F57FFD28B73C69B4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DB15D83DD7340AFEEC2155B /* Pods_CardBoard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A80D5CEC2908AC6F00317904 = {
 			isa = PBXGroup;
 			children = (
 				A80D5CF72908AC6F00317904 /* CardBoard */,
 				A80D5CF62908AC6F00317904 /* Products */,
+				ADA69CC15CFFFA9398134436 /* Pods */,
+				0CBFAC2F57FFD28B73C69B4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +72,7 @@
 		A80D5CF72908AC6F00317904 /* CardBoard */ = {
 			isa = PBXGroup;
 			children = (
+				A80D5D0C2908BA3E00317904 /* CardBoard.entitlements */,
 				A80D5CF82908AC6F00317904 /* AppDelegate.swift */,
 				A80D5CFA2908AC6F00317904 /* SceneDelegate.swift */,
 				A80D5CFC2908AC6F00317904 /* ViewController.swift */,
@@ -67,6 +84,15 @@
 			path = CardBoard;
 			sourceTree = "<group>";
 		};
+		ADA69CC15CFFFA9398134436 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B1477FA9789756965F793F9 /* Pods-CardBoard.debug.xcconfig */,
+				BC9162B93097052CCAE2C408 /* Pods-CardBoard.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A80D5D092908AC7100317904 /* Build configuration list for PBXNativeTarget "CardBoard" */;
 			buildPhases = (
+				CD3ADAC20EB5C0D57257F0FE /* [CP] Check Pods Manifest.lock */,
 				A80D5CF12908AC6F00317904 /* Sources */,
 				A80D5CF22908AC6F00317904 /* Frameworks */,
 				A80D5CF32908AC6F00317904 /* Resources */,
+				9970BFDCB2E326D319CD7DA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9970BFDCB2E326D319CD7DA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD3ADAC20EB5C0D57257F0FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardBoard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A80D5CF12908AC6F00317904 /* Sources */ = {
@@ -282,9 +352,12 @@
 		};
 		A80D5D0A2908AC7100317904 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1477FA9789756965F793F9 /* Pods-CardBoard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CardBoard/CardBoard.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6C552SVXS2;
@@ -302,6 +375,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Divyansh.CardBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,9 +384,12 @@
 		};
 		A80D5D0B2908AC7100317904 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9162B93097052CCAE2C408 /* Pods-CardBoard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CardBoard/CardBoard.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6C552SVXS2;
@@ -330,6 +407,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Divyansh.CardBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
