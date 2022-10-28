@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
+    - AFNetworking/NSURLSession
   - Alamofire (5.6.2)
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
@@ -8,6 +23,8 @@ PODS:
   - AppAuth/Core (1.6.0)
   - AppAuth/ExternalUserAgent (1.6.0):
     - AppAuth/Core
+  - BDBOAuth1Manager (2.0.0):
+    - AFNetworking/NSURLSession (~> 3.0.0)
   - Bolts/Tasks (1.9.1)
   - GoogleSignIn (6.2.4):
     - AppAuth (~> 1.5)
@@ -25,16 +42,20 @@ PODS:
     - Bolts/Tasks (= 1.9.1)
 
 DEPENDENCIES:
+  - AFNetworking
   - AlamofireImage
+  - BDBOAuth1Manager
   - GoogleSignIn
   - GoogleSignInSwiftSupport
   - Parse
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - Alamofire
     - AlamofireImage
     - AppAuth
+    - BDBOAuth1Manager
     - Bolts
     - GoogleSignIn
     - GoogleSignInSwiftSupport
@@ -43,9 +64,11 @@ SPEC REPOS:
     - Parse
 
 SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   AppAuth: 8fca6b5563a5baef2c04bee27538025e4ceb2add
+  BDBOAuth1Manager: 92d17d06f8a648602962304cd2f35ae7394fa001
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   GoogleSignIn: 5651ce3a61e56ca864160e79b484cd9ed3f49b7a
   GoogleSignInSwiftSupport: 565fa830a18d4d26d78c7a7c77be096fea7cf22b
@@ -53,6 +76,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
 
-PODFILE CHECKSUM: ac61aaa9a5ea9903747f70aba5731df82e495551
+PODFILE CHECKSUM: 84d8922e4baa6bba4fe56b6e34ea4c1c584168c8
 
 COCOAPODS: 1.11.3

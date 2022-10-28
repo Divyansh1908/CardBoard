@@ -9,6 +9,7 @@ import UIKit
 import Parse
 import GoogleSignIn
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -28,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               // Show the app's signed-in state.
             }
           }
-        
         return true
     }
     

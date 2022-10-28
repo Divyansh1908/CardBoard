@@ -10,5 +10,6 @@ target 'CardBoard' do
   pod 'AlamofireImage'
   pod 'GoogleSignIn'
   pod 'GoogleSignInSwiftSupport'
-
+  pod 'AFNetworking'
+  pod 'BDBOAuth1Manager'
 end
