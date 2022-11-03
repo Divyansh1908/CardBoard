@@ -9,7 +9,7 @@ import UIKit
 import GoogleSignIn
 import GoogleSignInSwift
 import Parse
-class ViewController: UIViewController{
+class ViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
@@ -35,7 +35,7 @@ class ViewController: UIViewController{
         lastName = user.profile?.familyName
             print(emailAddress ?? "none")
             print(fullName ?? "none")
-            print(firstName ?? "none")
+            print(firstName ?? "none") 
             print(lastName ?? "none")
             users["FirstName"] = firstName ?? "none"
             users["LastName"] = lastName ?? "none"
@@ -79,18 +79,57 @@ class ViewController: UIViewController{
     
 //    Twitter Signup Button
     @IBAction func twitterSignInButton(_ sender: Any) {
-        print("hello")
-        let myUrl = "https://api.twitter.com/oauth/request_token"
-        TwitterAPICaller.client?.login(url: myUrl, success: {
-            UserDefaults.standard.set(true, forKey: "userLoggedIn")
-        }, failure: { (Error) in
-            print("Could not Login!")
-        })
+        Toast.show(message: "Coming Soon!", controller: self)
+//        let myUrl = "https://api.twitter.com/oauth/request_token"
+//        TwitterAPICaller.client?.login(url: myUrl, success: {
+//            self.performSegue(withIdentifier: "loginToHome", sender: self)
+//            print("LoggedIn")
+//        }, failure: { (Error) in
+//            print("Could not Login!")
+//            Toast.show(message: "Coming Soon!", controller: self)
+//        })
     }
     
+//    Apple SignUp Button
+    @IBAction func appleSignInButton(_ sender: Any) {
+        Toast.show(message: "Coming Soon!", controller: self)
+    }
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        passwordField.delegate = self // set delegate
+        
+        // Tap Anywhere and the keyboard shuts down
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tap) // Add gesture recognizer to background view
+        
+        // Edge Swipe
+        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwiped))
+        edgePan.edges = .left
+        view.addGestureRecognizer(edgePan)
     }
+    
+    //Edge Swipe - CONT
+    @objc func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .recognized {
+            print("Screen edge swiped!")
+            self.performSegue(withIdentifier: "goBackToOnboard", sender: self)
+        }
+    }
+    // Tap Anywhere and the keyboard shuts down - CONT
+    @objc func handleTap() {
+        passwordField.resignFirstResponder() // dismiss keyoard
+        emailAddressField.resignFirstResponder()
+        firstNameField.resignFirstResponder()
+        lastNameField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // dismiss keyboard
+        return true
+    }
+
 }
 

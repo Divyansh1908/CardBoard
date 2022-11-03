@@ -1,15 +1,15 @@
 //
-//  TwitterApiCaller.swift
+//  TwitterAPICaller.swift
 //  CardBoard
 //
-//  Created by Divyansh Singh on 28/10/22.
+//  Created by Divyansh Singh on 02/11/22.
 //
 
 import UIKit
 import BDBOAuth1Manager
 
 class TwitterAPICaller: BDBOAuth1SessionManager {
-    static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "UjvJusGagc3hBrGLCxv6wOa4r", consumerSecret: "EZpDnLLtZkPCnTrgfNMvYLgS5D5q0IipHnycfY1TYtH8ZY80Lg")
+    static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "ZDIRXrp1GxoFtNUNxfZcg4qz0", consumerSecret: "YHR7jizCJOqHL5E0XmJUeJaTFiGav1ijtmPeMmNIUhqratb9Fo")
     var loginSuccess: (() -> ())?
     var loginFailure: ((Error) -> ())?
     
@@ -26,7 +26,7 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
         loginSuccess = success
         loginFailure = failure
         TwitterAPICaller.client?.deauthorize()
-        TwitterAPICaller.client?.fetchRequestToken(withPath: url, method: "GET", callbackURL: URL(string: "alamoTwitter://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
+        TwitterAPICaller.client?.fetchRequestToken(withPath: url, method: "GET", callbackURL: URL(string: "cardboardsign://"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
             let url = URL(string: "https://api.twitter.com/oauth/authorize?oauth_token=\(requestToken.token!)")!
             UIApplication.shared.open(url)
         }, failure: { (error: Error!) -> Void in
@@ -99,3 +99,4 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
         })
     }
 }
+

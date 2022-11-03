@@ -14,9 +14,13 @@
 		A80D5D002908AC6F00317904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80D5CFE2908AC6F00317904 /* Main.storyboard */; };
 		A80D5D022908AC7100317904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80D5D012908AC7100317904 /* Assets.xcassets */; };
 		A80D5D052908AC7100317904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80D5D032908AC7100317904 /* LaunchScreen.storyboard */; };
+		A86D7A4B29138DFD00FDD72F /* startUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A4A29138DFD00FDD72F /* startUpViewController.swift */; };
+		A86D7A4D2913930200FDD72F /* onBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A4C2913930200FDD72F /* onBoardingSlide.swift */; };
+		A86D7A4F2913951D00FDD72F /* startUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A4E2913951D00FDD72F /* startUpCollectionViewCell.swift */; };
+		A86D7A532913C4DC00FDD72F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A522913C4DC00FDD72F /* Toast.swift */; };
+		A879C3BA29136BBB002FF342 /* TwitterAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A879C3B929136BBB002FF342 /* TwitterAPICaller.swift */; };
 		A89C0022290BBD9C005DD3B2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89C0021290BBD9C005DD3B2 /* Social.framework */; };
 		A89C0024290BBDB0005DD3B2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89C0023290BBDAF005DD3B2 /* Accounts.framework */; };
-		A89C0026290BC2FC005DD3B2 /* TwitterApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C0025290BC2FC005DD3B2 /* TwitterApiCaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +35,13 @@
 		A80D5D042908AC7100317904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A80D5D062908AC7100317904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A80D5D0C2908BA3E00317904 /* CardBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardBoard.entitlements; sourceTree = "<group>"; };
+		A86D7A4A29138DFD00FDD72F /* startUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startUpViewController.swift; sourceTree = "<group>"; };
+		A86D7A4C2913930200FDD72F /* onBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingSlide.swift; sourceTree = "<group>"; };
+		A86D7A4E2913951D00FDD72F /* startUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startUpCollectionViewCell.swift; sourceTree = "<group>"; };
+		A86D7A522913C4DC00FDD72F /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		A879C3B929136BBB002FF342 /* TwitterAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPICaller.swift; sourceTree = "<group>"; };
 		A89C0021290BBD9C005DD3B2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A89C0023290BBDAF005DD3B2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		A89C0025290BC2FC005DD3B2 /* TwitterApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterApiCaller.swift; sourceTree = "<group>"; };
 		BC9162B93097052CCAE2C408 /* Pods-CardBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBoard.release.xcconfig"; path = "Target Support Files/Pods-CardBoard/Pods-CardBoard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +98,11 @@
 				A80D5D012908AC7100317904 /* Assets.xcassets */,
 				A80D5D032908AC7100317904 /* LaunchScreen.storyboard */,
 				A80D5D062908AC7100317904 /* Info.plist */,
-				A89C0025290BC2FC005DD3B2 /* TwitterApiCaller.swift */,
+				A879C3B929136BBB002FF342 /* TwitterAPICaller.swift */,
+				A86D7A4A29138DFD00FDD72F /* startUpViewController.swift */,
+				A86D7A4C2913930200FDD72F /* onBoardingSlide.swift */,
+				A86D7A4E2913951D00FDD72F /* startUpCollectionViewCell.swift */,
+				A86D7A522913C4DC00FDD72F /* Toast.swift */,
 			);
 			path = CardBoard;
 			sourceTree = "<group>";
@@ -115,7 +127,7 @@
 				A80D5CF12908AC6F00317904 /* Sources */,
 				A80D5CF22908AC6F00317904 /* Frameworks */,
 				A80D5CF32908AC6F00317904 /* Resources */,
-				E251B5485DDC82531D515BA8 /* [CP] Embed Pods Frameworks */,
+				A080E209FEF4E85327D71C1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +188,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A080E209FEF4E85327D71C1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CD3ADAC20EB5C0D57257F0FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,23 +227,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E251B5485DDC82531D515BA8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CardBoard/Pods-CardBoard-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -223,8 +235,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A80D5CFD2908AC6F00317904 /* ViewController.swift in Sources */,
-				A89C0026290BC2FC005DD3B2 /* TwitterApiCaller.swift in Sources */,
+				A86D7A532913C4DC00FDD72F /* Toast.swift in Sources */,
+				A879C3BA29136BBB002FF342 /* TwitterAPICaller.swift in Sources */,
+				A86D7A4B29138DFD00FDD72F /* startUpViewController.swift in Sources */,
 				A80D5CF92908AC6F00317904 /* AppDelegate.swift in Sources */,
+				A86D7A4D2913930200FDD72F /* onBoardingSlide.swift in Sources */,
+				A86D7A4F2913951D00FDD72F /* startUpCollectionViewCell.swift in Sources */,
 				A80D5CFB2908AC6F00317904 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = CardBoard/CardBoard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -403,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = CardBoard/CardBoard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;

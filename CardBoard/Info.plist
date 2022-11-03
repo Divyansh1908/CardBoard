@@ -12,6 +12,14 @@
 				<string>com.googleusercontent.apps.154066948810-fbhgjggb582mgppdngc1hsfqvrs22u7i</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>cardboardsign://</string>
+			</array>
+		</dict>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

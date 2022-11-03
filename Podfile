@@ -6,7 +6,7 @@ target 'CardBoard' do
   use_frameworks!
 
   # Pods for CardBoard
-  pod 'Parse'
+    pod 'Parse'
   pod 'AlamofireImage'
   pod 'GoogleSignIn'
   pod 'GoogleSignInSwiftSupport'
