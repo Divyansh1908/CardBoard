@@ -24,11 +24,11 @@ class startUpViewController: UIViewController {
     @IBOutlet weak var startUpPageControl: UIPageControl!
     
     @IBAction func startUpSignUpButton(_ sender: Any) {
-        print("Hello")
+        print("OnBoarding SignUp Button Clicked")
     }
     
     @IBAction func startUpSignInButton(_ sender: Any) {
-        print("Hi")
+        print("OnBoarding SignIn Button Clicked")
     }
     /*
     // MARK: - Navigation

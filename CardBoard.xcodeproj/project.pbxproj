@@ -21,6 +21,7 @@
 		A879C3BA29136BBB002FF342 /* TwitterAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A879C3B929136BBB002FF342 /* TwitterAPICaller.swift */; };
 		A89C0022290BBD9C005DD3B2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89C0021290BBD9C005DD3B2 /* Social.framework */; };
 		A89C0024290BBDB0005DD3B2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89C0023290BBDAF005DD3B2 /* Accounts.framework */; };
+		A8A2B2BB291451B200E79D57 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A2B2BA291451B200E79D57 /* loginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A879C3B929136BBB002FF342 /* TwitterAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPICaller.swift; sourceTree = "<group>"; };
 		A89C0021290BBD9C005DD3B2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A89C0023290BBDAF005DD3B2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A8A2B2BA291451B200E79D57 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		BC9162B93097052CCAE2C408 /* Pods-CardBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBoard.release.xcconfig"; path = "Target Support Files/Pods-CardBoard/Pods-CardBoard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				A86D7A4C2913930200FDD72F /* onBoardingSlide.swift */,
 				A86D7A4E2913951D00FDD72F /* startUpCollectionViewCell.swift */,
 				A86D7A522913C4DC00FDD72F /* Toast.swift */,
+				A8A2B2BA291451B200E79D57 /* loginViewController.swift */,
 			);
 			path = CardBoard;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				A86D7A4D2913930200FDD72F /* onBoardingSlide.swift in Sources */,
 				A86D7A4F2913951D00FDD72F /* startUpCollectionViewCell.swift in Sources */,
 				A80D5CFB2908AC6F00317904 /* SceneDelegate.swift in Sources */,
+				A8A2B2BB291451B200E79D57 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

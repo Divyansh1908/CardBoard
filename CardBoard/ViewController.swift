@@ -18,7 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     // Signup With Google and push all the data to parse.
     let signInConfig = GIDConfiguration(clientID: "154066948810-fbhgjggb582mgppdngc1hsfqvrs22u7i.apps.googleusercontent.com")
-    @IBAction func googleButton(_ sender: Any) {
+    @IBAction func googleButton(_ sender: Any)
+    {
+        print("Clicked Google SignUp Button")
         let users = PFUser()
         var emailAddress: String?
         var firstName: String?
@@ -47,18 +49,19 @@ class ViewController: UIViewController, UITextFieldDelegate{
                 if let error = error {
                   let errorString = error.localizedDescription
                   // Show the errorString somewhere and let the user try again.
-                    print("Please Try Agian")
+                    print("Google - Please Try Agian!")
                 } else {
-                   print("You have signed up!!")
+                   print("User SignedUp using Google!!")
                 }
               }
           // If sign in succeeded, display the app's main content View.
         }
     }
     
-    // User SignUp Button when user fills out all the fields and pushes the data to parse.
+    //User SignUp Button when user fills out all the fields and pushes the data to parse. - Manual
     @IBAction func signUpButton(_ sender: Any)
     {
+    print("Clicked Manual SignUp Button")
     let users = PFUser()
     users["FirstName"] = firstNameField.text
     users["LastName"] = lastNameField.text
@@ -70,15 +73,17 @@ class ViewController: UIViewController, UITextFieldDelegate{
         if let error = error {
           let errorString = error.localizedDescription
           // Show the errorString somewhere and let the user try again.
-            print("Please Try Agian")
+            print("Manual - Please Try Agian")
         } else {
-           print("You have signed up!!")
+           print("User SignedUp Manually!")
         }
       }
     }
     
-//    Twitter Signup Button
-    @IBAction func twitterSignInButton(_ sender: Any) {
+    //Twitter SignUp Button
+    @IBAction func twitterSignInButton(_ sender: Any)
+    {
+        print("Clicked Twitter SignUp Button")
         Toast.show(message: "Coming Soon!", controller: self)
 //        let myUrl = "https://api.twitter.com/oauth/request_token"
 //        TwitterAPICaller.client?.login(url: myUrl, success: {
@@ -90,8 +95,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
 //        })
     }
     
-//    Apple SignUp Button
+    //Apple SignUp Button
     @IBAction func appleSignInButton(_ sender: Any) {
+        print("Clicked Apple SignUp Button")
         Toast.show(message: "Coming Soon!", controller: self)
     }
     
@@ -99,6 +105,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Dismiss keyboard after pressing enter button on PasswordField
         passwordField.delegate = self // set delegate
         
         // Tap Anywhere and the keyboard shuts down
@@ -114,7 +121,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     //Edge Swipe - CONT
     @objc func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
         if recognizer.state == .recognized {
-            print("Screen edge swiped!")
+            print("Screen edge swiped left - back to StartUp screen from - SignUp")
             self.performSegue(withIdentifier: "goBackToOnboard", sender: self)
         }
     }
@@ -126,6 +133,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         lastNameField.resignFirstResponder()
     }
     
+    // Dismiss keyboard after pressing enter button on PasswordField - CONT
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // dismiss keyboard
         return true

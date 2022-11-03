@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +36,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="Sign Up button"/>
                                 <connections>
                                     <action selector="startUpSignUpButton:" destination="Djf-O6-LAT" eventType="touchUpInside" id="8fq-cf-DI1"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToSignUpPage" id="A52-z7-qsJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToSignUpPage" modalTransitionStyle="crossDissolve" id="A52-z7-qsJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-iB-ZJD">
@@ -47,7 +46,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="Sign In button"/>
                                 <connections>
                                     <action selector="startUpSignInButton:" destination="Djf-O6-LAT" eventType="touchUpInside" id="URz-U5-aPt"/>
-                                    <segue destination="YgL-yz-xha" kind="presentation" id="hda-Kv-F5Q"/>
+                                    <segue destination="YgL-yz-xha" kind="presentation" modalTransitionStyle="crossDissolve" id="hda-Kv-F5Q"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RgX-ZC-ijP">
@@ -108,20 +107,103 @@
             </objects>
             <point key="canvasLocation" x="-663.07692307692309" y="-29.14691943127962"/>
         </scene>
-        <!--View Controller-->
+        <!--loginViewController-->
         <scene sceneID="mgh-5y-Zaf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="YgL-yz-xha" sceneMemberID="viewController">
+                <viewController title="loginViewController" modalPresentationStyle="fullScreen" id="YgL-yz-xha" customClass="loginViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ALD-Pg-Vjo">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="CardBoard" translatesAutoresizingMaskIntoConstraints="NO" id="y6I-Td-pLm">
+                                <rect key="frame" x="103" y="183" width="184" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="blackWhiteElement" translatesAutoresizingMaskIntoConstraints="NO" id="Vs9-uL-cQL">
+                                <rect key="frame" x="150" y="220" width="91" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="email_passBox" translatesAutoresizingMaskIntoConstraints="NO" id="j8p-el-R0c">
+                                <rect key="frame" x="47" y="307" width="296" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="email_passBox" translatesAutoresizingMaskIntoConstraints="NO" id="xJc-dp-bUD">
+                                <rect key="frame" x="47" y="358" width="296" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vm-QK-CsX">
+                                <rect key="frame" x="140" y="467" width="110" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back button"/>
+                                <connections>
+                                    <segue destination="Djf-O6-LAT" kind="presentation" identifier="backToOnboardFromLogin" modalTransitionStyle="crossDissolve" id="Z9z-Eq-2NW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxG-Fg-EIj">
+                                <rect key="frame" x="69" y="590" width="255" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH APPLE button"/>
+                                <connections>
+                                    <action selector="loginWithAppleButton:" destination="YgL-yz-xha" eventType="touchUpInside" id="Osm-2Y-whS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMW-Mj-1eC">
+                                <rect key="frame" x="69" y="651" width="255" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH GOOGLE button"/>
+                                <connections>
+                                    <action selector="loginWithGoogleButton:" destination="YgL-yz-xha" eventType="touchUpInside" id="d06-jn-yeu"/>
+                                </connections>
+                            </button>
+                            <textField contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zl5-wk-2ai">
+                                <rect key="frame" x="68" y="307" width="265" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kp2-PM-Mjz">
+                                <rect key="frame" x="68" y="358" width="265" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHZ-Ne-6sJ">
+                                <rect key="frame" x="158" y="424" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="loginManuallyButton:" destination="YgL-yz-xha" eventType="touchUpInside" id="ORR-8W-Qhy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LI-TC-Kuc">
+                                <rect key="frame" x="69" y="712" width="255" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH TWITTER button"/>
+                                <connections>
+                                    <action selector="loginWithTwitter:" destination="YgL-yz-xha" eventType="touchUpInside" id="1ok-7g-CLM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UtM-6w-101"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="loginEmailAddress" destination="Zl5-wk-2ai" id="RX9-9R-W3V"/>
+                        <outlet property="loginPasswordField" destination="kp2-PM-Mjz" id="glb-Kg-SYY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0r-Ko-hpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="312"/>
+            <point key="canvasLocation" x="142" y="319"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -197,7 +279,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="back button"/>
                                 <connections>
-                                    <segue destination="Djf-O6-LAT" kind="presentation" identifier="goBackToOnboard" id="r3G-Q3-hDa"/>
+                                    <segue destination="Djf-O6-LAT" kind="presentation" identifier="goBackToOnboard" modalTransitionStyle="crossDissolve" id="r3G-Q3-hDa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I95-f9-r8m">
@@ -249,9 +331,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="-441"/>
+            <point key="canvasLocation" x="142" y="-415"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z9z-Eq-2NW"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="CardBoard" width="184" height="28.333333969116211"/>
         <image name="Sign In button" width="108" height="31"/>
@@ -264,8 +349,5 @@
         <image name="bgEllipse" width="393" height="332"/>
         <image name="blackWhiteElement" width="91" height="23"/>
         <image name="email_passBox" width="296" height="43"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
