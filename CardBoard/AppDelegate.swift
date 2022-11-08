@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 import GoogleSignIn
-
+import GoogleSignInSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,11 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
-              // Show the app's signed-out state.
+              print("Show the app's signed-out state.")
             } else {
-              // Show the app's signed-in state.
+                print("Show the app's signed-in state.")
             }
           }
+
+        
         return true
     }
     
