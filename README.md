@@ -4,6 +4,8 @@ Creators
 [**_Divyansh1908_**](https://github.com/Divyansh1908)  
 [**_VnaykDev_**](https://github.com/VnaykDev)
 
+## Application Architecture - https://www.figma.com/file/v28kGg5yAHJ0j8Fxoa7Uqy/Card-Board-Design-Process?node-id=88%3A310
+
 # Walkthrough (Prototype)  
 ### Introduction, Login & Home
   
