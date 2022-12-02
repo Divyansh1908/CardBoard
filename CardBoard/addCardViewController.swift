@@ -11,8 +11,6 @@ import Alamofire
 import AlamofireImage
 class addCardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
-    
     @IBOutlet weak var tableView: UITableView!
     
     var cards = [PFObject]()
@@ -25,11 +23,14 @@ class addCardViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        //Accessing the AllCardInfoTable
         let query = PFQuery(className: "AllCardInfoTable")
         query.includeKey("objectId")
+        //Remember the Query Limit
         query.limit = 10
         
         query.findObjectsInBackground { (cards, error) in
@@ -43,40 +44,39 @@ class addCardViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cards.count
     }
     
+    //Putting cardImage and cardInfo in the cell for each card
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"addCardTableViewCell") as! addCardTableViewCell
         let card = cards[indexPath.row]
         cell.cardInfo.text = card["CardName"] as! String
-        //print(card["CardName"] as! String)
-        
         let imageFile = card["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
-        
         cell.cardImage.af.setImage(withURL: url)
-        
-        
         return cell
     }
     
+    //Selecting row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
     
+    //Deselecting row
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
         
        
     @IBAction func doneButton(_ sender: Any) {
-        
         selectedCards.removeAll()
+        //Get all the selected cards
         if let list = tableView.indexPathsForSelectedRows as? [NSIndexPath]{
             for ipath in list
             {
                 selectedCards.append(cards[ipath.row])
             }
         }
+        //Putting value of each selected cards in the UsersCardInfoTable
         for cardu in selectedCards
         {
             var UsersCardInfoTable = PFObject (className: "UsersCardInfoTable")
@@ -113,6 +113,7 @@ class addCardViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
             }
         }
+        //Goto Next Screen
         self.performSegue(withIdentifier: "gotoHomeScreen", sender: self)
         }
         
