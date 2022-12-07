@@ -18,6 +18,7 @@
 		A84FBB6E294041D6005F2AB0 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = A84FBB6D294041D6005F2AB0 /* Collections */; };
 		A84FBB70294041D6005F2AB0 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = A84FBB6F294041D6005F2AB0 /* DequeModule */; };
 		A84FBB72294041D6005F2AB0 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = A84FBB71294041D6005F2AB0 /* OrderedCollections */; };
+		A84FBB7429408DDA005F2AB0 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84FBB7329408DDA005F2AB0 /* resultViewController.swift */; };
 		A86D7A4B29138DFD00FDD72F /* startUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A4A29138DFD00FDD72F /* startUpViewController.swift */; };
 		A86D7A4D2913930200FDD72F /* onBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A4C2913930200FDD72F /* onBoardingSlide.swift */; };
 		A86D7A4F2913951D00FDD72F /* startUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A4E2913951D00FDD72F /* startUpCollectionViewCell.swift */; };
@@ -43,6 +44,7 @@
 		A80D5D062908AC7100317904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A80D5D0C2908BA3E00317904 /* CardBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardBoard.entitlements; sourceTree = "<group>"; };
 		A826BE71293FFF6D0024AA75 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		A84FBB7329408DDA005F2AB0 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		A86D7A4A29138DFD00FDD72F /* startUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startUpViewController.swift; sourceTree = "<group>"; };
 		A86D7A4C2913930200FDD72F /* onBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingSlide.swift; sourceTree = "<group>"; };
 		A86D7A4E2913951D00FDD72F /* startUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startUpCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				A8D78505293981CD0079074D /* addCardTableViewCell.swift */,
 				A8D785072939850B0079074D /* addCardViewController.swift */,
 				A826BE71293FFF6D0024AA75 /* homeViewController.swift */,
+				A84FBB7329408DDA005F2AB0 /* resultViewController.swift */,
 			);
 			path = CardBoard;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				A86D7A532913C4DC00FDD72F /* Toast.swift in Sources */,
 				A879C3BA29136BBB002FF342 /* TwitterAPICaller.swift in Sources */,
 				A86D7A4B29138DFD00FDD72F /* startUpViewController.swift in Sources */,
+				A84FBB7429408DDA005F2AB0 /* resultViewController.swift in Sources */,
 				A80D5CF92908AC6F00317904 /* AppDelegate.swift in Sources */,
 				A86D7A4D2913930200FDD72F /* onBoardingSlide.swift in Sources */,
 				A8D785082939850B0079074D /* addCardViewController.swift in Sources */,

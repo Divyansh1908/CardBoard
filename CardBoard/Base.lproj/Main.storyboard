@@ -469,11 +469,27 @@
                     <connections>
                         <outlet property="categoryPicker" destination="VCS-e1-8h6" id="LrU-fh-ehN"/>
                         <outlet property="priceGetter" destination="CVW-3E-b9b" id="y7e-Et-4Mh"/>
+                        <segue destination="SqF-YR-c5e" kind="presentation" identifier="toResultScreen" modalPresentationStyle="fullScreen" id="kX8-3b-Fqr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSp-Nv-tGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1707.6923076923076" y="-284.36018957345971"/>
+        </scene>
+        <!--resultViewController-->
+        <scene sceneID="fCh-iQ-Gb2">
+            <objects>
+                <viewController title="resultViewController" id="SqF-YR-c5e" customClass="resultViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PlE-hB-UUe">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h2a-3D-JXw"/>
+                        <color key="backgroundColor" red="0.16340669990000001" green="0.4829037189" blue="0.53227430580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nyI-vp-2gn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571" y="-284"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

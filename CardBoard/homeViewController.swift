@@ -27,6 +27,12 @@ class homeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     var calculatedCashBack: OrderedDictionary<String, Float> = [:]
     var calculatedPoints: OrderedDictionary<String, Float> = [:]
     var calculatedMiles: OrderedDictionary<String, Float> = [:]
+    
+    var objects: [PFObject]?
+    var huiiii: [PFObject]?
+    struct finalwa {
+       static var finals: OrderedDictionary<String, Float> = [:]
+    }
     let data = ["Gas", "Dining", "ECommerce", "Groceries", "Supermarket", "Streaming", "Travel", "Entertainment", "Lifestyle", "Others"]
     
     override func viewDidLoad()
@@ -68,7 +74,9 @@ class homeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         return true
     }
     
-    @IBAction func resultButton(_ sender: Any) {
+
+    func calculations()
+    {
         price = Float(priceGetter.text!) ?? 0.0
         
         print(price)
@@ -84,101 +92,154 @@ class homeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 //            }
 //        }
 //
+        print("TMKOC")
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
-            if let error = error {
-                // Log details of the failure
-                print(error.localizedDescription)
-            } else if let objects = objects {
-                // The find succeeded.
-                print("Successfully retrieved \(objects.count) cards.")
-                // Do something with the found objects
-                for object in objects {
-                    print(object["CardName"] as! String)
-                    if(object["RewardCategory"] as! String == "Cashback")
-                    {
-                        self.cashbackDict[object["CardName"] as! String] = object[self.rowSelected] as! Int
+                    if let error = error {
+                        // Log details of the failure
+                        print(error.localizedDescription)
+                    } else if let objects = objects {
+                        // The find succeeded.
+                        print("Successfully retrieved \(objects.count) cards.")
+                        // Do something with the found objects
+                        for object in objects {
+                            print(object["CardName"] as! String)
+                            if(object["RewardCategory"] as! String == "Cashback")
+                            {
+                                self.cashbackDict[object["CardName"] as! String] = object[self.rowSelected] as! Int
+                            }
+                            if(object["RewardCategory"] as! String == "Points")
+                            {
+                                self.pointsDict[object["CardName"] as! String] = object[self.rowSelected] as! Int
+                            }
+                            if(object["RewardCategory"] as! String == "Miles")
+                            {
+                                self.milesDict[object["CardName"] as! String] = object[self.rowSelected] as! Int
+                            }
+                        }
+                        //prints
+                        
+                        //Cashback
+                        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+                        for d in 0..<self.cashbackDict.count{
+                            print("cashback \(self.cashbackDict.elements[d].key): \(self.cashbackDict.elements[d].value)")
+                            var cashback = (Float(self.cashbackDict.elements[d].value)/100)*self.price
+                            self.calculatedCashBack[self.cashbackDict.elements[d].key] = cashback
+                        }
+                        for e in 0..<self.calculatedCashBack.count {
+                           print("CashBackCalc \(self.calculatedCashBack.elements[e].key): \(self.calculatedCashBack.elements[e].value)")
+                        }
+                        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+                        //Cashback
+        //                for (key, value) in self.cashbackDict {
+        //                   print("Cashback \(key): \(value)")
+        //                    var cashback = (Float(value)/100)*self.price
+        //                    self.calculatedCashBack[key] = cashback
+        //                }
+        //                for (key, value) in self.calculatedCashBack {
+        //                   print("CashbackCalc \(key): \(value)")
+        //                }
+        //                print("--------")
+                        
+                        //Points
+                        print("***********")
+                        for d in 0..<self.pointsDict.count{
+                            print("points \(self.pointsDict.elements[d].key): \(self.pointsDict.elements[d].value)")
+                            var points = Float(self.pointsDict.elements[d].value)*self.price
+                            self.calculatedPoints[self.pointsDict.elements[d].key] = points
+                        }
+                        for e in 0..<self.calculatedPoints.count {
+                           print("pointsCalc \(self.calculatedPoints.elements[e].key): \(self.calculatedPoints.elements[e].value)")
+                        }
+                        print("***********")
+                        
+                        
+        //                for (key, value) in self.pointsDict {
+        //                   print("points \(key): \(value)")
+        //                    var points = Float(value)*self.price
+        //                    self.calculatedPoints[key] = points
+        //                }
+        //                for (key, value) in self.calculatedPoints {
+        //                   print("pointsCalc \(key): \(value)")
+        //                }
+                        
+                        //Miles
+                        print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+                        for d in 0..<self.milesDict.count{
+                            print("miles \(self.milesDict.elements[d].key): \(self.milesDict.elements[d].value)")
+                            var miles = Float(self.milesDict.elements[d].value)*self.price
+                            self.calculatedMiles[self.milesDict.elements[d].key] = miles
+                        }
+                        for e in 0..<self.calculatedMiles.count {
+                           print("milesCalc \(self.calculatedMiles.elements[e].key): \(self.calculatedMiles.elements[e].value)")
+                        }
+                        print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+                        
+                        //Miles
+        //                for (key, value) in self.milesDict {
+        //                   print("Miles \(key): \(value)")
+        //                    var Miles = Float(value)*self.price
+        //                    self.calculatedMiles[key] = Miles
+        //                }
+        //                for (key, value) in self.calculatedMiles {
+        //                   print("MilesCalc \(key): \(value)")
+        //                }
+        //                print("--------")
+                        
+                        
+                        print("OOOOOOOOOOOOOOOOOOOOOO")
+                        //Filling Final Dictionary for printing
+                        if(self.calculatedCashBack.isEmpty == false)
+                        {
+                            homeViewController.finalwa.finals[self.calculatedCashBack.elements[0].key] = self.calculatedCashBack.elements[0].value
+                        }
+                        if(self.calculatedPoints.isEmpty == false)
+                        {
+                            homeViewController.finalwa.finals[self.calculatedPoints.elements[0].key] = self.calculatedPoints.elements[0].value
+                        }
+                        if(self.calculatedMiles.isEmpty == false)
+                        {
+                            homeViewController.finalwa.finals[self.calculatedMiles.elements[0].key] = self.calculatedMiles.elements[0].value
+                        }
+                        ///
+                        if(self.calculatedCashBack.isEmpty == false)
+                        {
+                            for e in 1..<self.calculatedCashBack.count {
+                                homeViewController.finalwa.finals[self.calculatedCashBack.elements[e].key] = self.calculatedCashBack.elements[e].value
+                            }
+                        }
+                        if(self.calculatedPoints.isEmpty == false)
+                        {
+                            for f in 1..<self.calculatedPoints.count {
+                                homeViewController.finalwa.finals[self.calculatedPoints.elements[f].key] = self.calculatedPoints.elements[f].value
+                            }
+                        }
+                        if(self.calculatedMiles.isEmpty == false)
+                        {
+                            for g in 1..<self.calculatedMiles.count {
+                                homeViewController.finalwa.finals[self.calculatedMiles.elements[g].key] = self.calculatedMiles.elements[g].value
+                            }
+                        }
+                        for h in 0..<homeViewController.finalwa.finals.count {
+                            print("Finalssss \(homeViewController.finalwa.finals.elements[h].key): \(homeViewController.finalwa.finals.elements[h].value)")
+                        }
+                        print("OOOOOOOOOOOOOOOOOOOOOO")
                     }
-                    if(object["RewardCategory"] as! String == "Points")
-                    {
-                        self.pointsDict[object["CardName"] as! String] = object[self.rowSelected] as! Int
-                    }
-                    if(object["RewardCategory"] as! String == "Miles")
-                    {
-                        self.milesDict[object["CardName"] as! String] = object[self.rowSelected] as! Int
-                    }
                 }
-                //prints
-                
-                //Cashback
-                print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-                for d in 0..<self.cashbackDict.count{
-                    print("cashback \(self.cashbackDict.elements[d].key): \(self.cashbackDict.elements[d].value)")
-                    var cashback = (Float(self.cashbackDict.elements[d].value)/100)*self.price
-                    self.calculatedCashBack[self.cashbackDict.elements[d].key] = cashback
-                }
-                for e in 0..<self.calculatedCashBack.count {
-                   print("CashBackCalc \(self.calculatedCashBack.elements[e].key): \(self.calculatedCashBack.elements[e].value)")
-                }
-                print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-                //Cashback
-//                for (key, value) in self.cashbackDict {
-//                   print("Cashback \(key): \(value)")
-//                    var cashback = (Float(value)/100)*self.price
-//                    self.calculatedCashBack[key] = cashback
-//                }
-//                for (key, value) in self.calculatedCashBack {
-//                   print("CashbackCalc \(key): \(value)")
-//                }
-//                print("--------")
-                
-                //Points
-                print("*********************************")
-                for d in 0..<self.pointsDict.count{
-                    print("points \(self.pointsDict.elements[d].key): \(self.pointsDict.elements[d].value)")
-                    var points = Float(self.pointsDict.elements[d].value)*self.price
-                    self.calculatedPoints[self.pointsDict.elements[d].key] = points
-                }
-                for e in 0..<self.calculatedPoints.count {
-                   print("pointsCalc \(self.calculatedPoints.elements[e].key): \(self.calculatedPoints.elements[e].value)")
-                }
-                print("*********************************")
-                
-                
-//                for (key, value) in self.pointsDict {
-//                   print("points \(key): \(value)")
-//                    var points = Float(value)*self.price
-//                    self.calculatedPoints[key] = points
-//                }
-//                for (key, value) in self.calculatedPoints {
-//                   print("pointsCalc \(key): \(value)")
-//                }
-                
-                //Miles
-                print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-                for d in 0..<self.milesDict.count{
-                    print("miles \(self.milesDict.elements[d].key): \(self.milesDict.elements[d].value)")
-                    var miles = Float(self.milesDict.elements[d].value)*self.price
-                    self.calculatedMiles[self.milesDict.elements[d].key] = miles
-                }
-                for e in 0..<self.calculatedMiles.count {
-                   print("milesCalc \(self.calculatedMiles.elements[e].key): \(self.calculatedMiles.elements[e].value)")
-                }
-                print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-                
-                
-                //Miles
-//                for (key, value) in self.milesDict {
-//                   print("Miles \(key): \(value)")
-//                    var Miles = Float(value)*self.price
-//                    self.calculatedMiles[key] = Miles
-//                }
-//                for (key, value) in self.calculatedMiles {
-//                   print("MilesCalc \(key): \(value)")
-//                }
-//                print("--------")
-                
-                
             }
-        }
+    
+    @IBAction func resultButton(_ sender: Any)
+    {
+        Toast.show(message: "We are working on it", controller: self)
+        calculations()
+        DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
+            self.performSegue(withIdentifier: "toResultScreen", sender: homeViewController.finalwa.finals)
+        })
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! resultViewController
+        destination.Milgaya = sender as! OrderedDictionary
     }
 }
