@@ -83,6 +83,7 @@ class addCardViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("Going in")
 
             UsersCardInfoTable["UserNameObjectId"] = PFUser.current()!
+            UsersCardInfoTable["StringVersionUser"] = PFUser.current()!.objectId as! String
             UsersCardInfoTable["BankName"] = cardu["BankName"] as! String
             UsersCardInfoTable["CardName"] = cardu["CardName"] as! String
             UsersCardInfoTable["Title1"] = cardu["Title1"] as! String
