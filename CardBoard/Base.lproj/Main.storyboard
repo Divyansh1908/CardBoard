@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Djf-O6-LAT">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,24 +15,24 @@
             <objects>
                 <viewController title="startUpViewController" modalPresentationStyle="fullScreen" id="Djf-O6-LAT" customClass="startUpViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="goY-mR-ty7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="bgEllipse" translatesAutoresizingMaskIntoConstraints="NO" id="jdC-jf-OzQ">
-                                <rect key="frame" x="-8" y="-33" width="391" height="338"/>
+                                <rect key="frame" x="-17" y="-40" width="394" height="342"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="CardBoard" translatesAutoresizingMaskIntoConstraints="NO" id="ktZ-P7-nac">
-                                <rect key="frame" x="98" y="112" width="184" height="24"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="CardBoard" translatesAutoresizingMaskIntoConstraints="NO" id="ktZ-P7-nac">
+                                <rect key="frame" x="92" y="106" width="190" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="kCO-aa-Zjf"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="blackWhiteElement" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-w3-hIZ">
-                                <rect key="frame" x="145" y="147" width="90" height="23"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="blackWhiteElement" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-w3-hIZ">
+                                <rect key="frame" x="141" y="143" width="93" height="21"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAa-FL-qkk">
-                                <rect key="frame" x="104" y="636" width="167" height="58"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAa-FL-qkk">
+                                <rect key="frame" x="99" y="638" width="171" height="60"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Sign Up button"/>
                                 <connections>
@@ -40,9 +40,11 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToSignUpPage" modalTransitionStyle="crossDissolve" id="A52-z7-qsJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-iB-ZJD">
-                                <rect key="frame" x="137" y="702" width="104" height="34"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-iB-ZJD">
+                                <rect key="frame" x="134" y="703" width="107" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="dD6-T0-NvJ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Sign In button"/>
                                 <connections>
@@ -50,26 +52,28 @@
                                     <segue destination="YgL-yz-xha" kind="presentation" modalTransitionStyle="crossDissolve" id="hda-Kv-F5Q"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RgX-ZC-ijP">
-                                <rect key="frame" x="-8" y="175" width="390" height="417"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RgX-ZC-ijP">
+                                <rect key="frame" x="0.0" y="171" width="393" height="422"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="422" id="Hkj-8c-yyz"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lQu-bq-7XU">
-                                    <size key="itemSize" width="389" height="413"/>
+                                    <size key="itemSize" width="418" height="413"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="playback" reuseIdentifier="startUpCollectionViewCell" id="U6L-ef-cmm" customClass="startUpCollectionViewCell" customModule="CardBoard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2" width="389" height="413"/>
+                                        <rect key="frame" x="0.0" y="5" width="418" height="413"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="auH-ps-g5H">
-                                            <rect key="frame" x="0.0" y="0.0" width="389" height="413"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="418" height="413"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CV2-Rg-Kc2">
-                                                    <rect key="frame" x="-1" y="16" width="390" height="378"/>
+                                                    <rect key="frame" x="21" y="18" width="378" height="379"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,7 +84,7 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="389" height="413"/>
+                                        <size key="customSize" width="418" height="413"/>
                                         <connections>
                                             <outlet property="slideImageView" destination="CV2-Rg-Kc2" id="tSr-nr-7KQ"/>
                                         </connections>
@@ -91,13 +95,36 @@
                                     <outlet property="delegate" destination="Djf-O6-LAT" id="66O-lR-eQb"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-9j-Z9Z">
-                                <rect key="frame" x="64" y="597" width="255" height="27"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-9j-Z9Z">
+                                <rect key="frame" x="57" y="602" width="261" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="chK-Re-j6Y"/>
+                                </constraints>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ik8-4S-JaC"/>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RgX-ZC-ijP" secondAttribute="trailing" id="8Px-23-ST4"/>
+                            <constraint firstItem="oLc-iB-ZJD" firstAttribute="leading" secondItem="Ik8-4S-JaC" secondAttribute="leading" constant="134" id="9CL-QI-JD1"/>
+                            <constraint firstItem="ktZ-P7-nac" firstAttribute="leading" secondItem="Ik8-4S-JaC" secondAttribute="leading" constant="92" id="A3a-we-DSA"/>
+                            <constraint firstItem="oLc-iB-ZJD" firstAttribute="centerX" secondItem="q1d-w3-hIZ" secondAttribute="centerX" id="BTo-Tc-Fq7"/>
+                            <constraint firstItem="eiT-9j-Z9Z" firstAttribute="top" secondItem="RgX-ZC-ijP" secondAttribute="bottom" constant="9" id="HnX-Bw-ZkO"/>
+                            <constraint firstItem="oLc-iB-ZJD" firstAttribute="centerX" secondItem="ktZ-P7-nac" secondAttribute="centerX" id="KMd-JU-reS"/>
+                            <constraint firstItem="RAa-FL-qkk" firstAttribute="leading" secondItem="Ik8-4S-JaC" secondAttribute="leading" constant="99" id="Mzc-q2-z81"/>
+                            <constraint firstItem="Ik8-4S-JaC" firstAttribute="trailing" secondItem="RAa-FL-qkk" secondAttribute="trailing" constant="123" id="Ssy-Ia-P4O"/>
+                            <constraint firstItem="q1d-w3-hIZ" firstAttribute="top" secondItem="ktZ-P7-nac" secondAttribute="bottom" constant="10" id="a4J-x9-fxT"/>
+                            <constraint firstItem="RAa-FL-qkk" firstAttribute="top" secondItem="eiT-9j-Z9Z" secondAttribute="bottom" constant="12" id="jbH-mh-cgI"/>
+                            <constraint firstItem="RgX-ZC-ijP" firstAttribute="top" secondItem="q1d-w3-hIZ" secondAttribute="bottom" constant="7" id="k44-yD-g4Y"/>
+                            <constraint firstItem="oLc-iB-ZJD" firstAttribute="centerX" secondItem="eiT-9j-Z9Z" secondAttribute="centerX" id="lFo-M8-ueq"/>
+                            <constraint firstItem="Ik8-4S-JaC" firstAttribute="trailing" secondItem="oLc-iB-ZJD" secondAttribute="trailing" constant="152" id="lgw-Yn-bk7"/>
+                            <constraint firstItem="RgX-ZC-ijP" firstAttribute="leading" secondItem="goY-mR-ty7" secondAttribute="leading" id="pDE-zI-1j6"/>
+                            <constraint firstItem="eiT-9j-Z9Z" firstAttribute="leading" secondItem="Ik8-4S-JaC" secondAttribute="leading" constant="57" id="qes-1c-ZrY"/>
+                            <constraint firstItem="ktZ-P7-nac" firstAttribute="top" secondItem="Ik8-4S-JaC" secondAttribute="top" constant="47" id="smW-q6-k6W"/>
+                            <constraint firstItem="Ik8-4S-JaC" firstAttribute="bottom" secondItem="oLc-iB-ZJD" secondAttribute="bottom" constant="79" id="wIJ-Jl-5Pu"/>
+                            <constraint firstAttribute="bottom" secondItem="eiT-9j-Z9Z" secondAttribute="bottom" constant="226" id="x8S-oj-pcr"/>
+                            <constraint firstItem="oLc-iB-ZJD" firstAttribute="top" secondItem="RAa-FL-qkk" secondAttribute="bottom" constant="5" id="zIP-xh-Ve9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="startUpCollectionView" destination="RgX-ZC-ijP" id="cTZ-IH-2CQ"/>
@@ -106,34 +133,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAk-3C-c61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663.07692307692309" y="-29.14691943127962"/>
+            <point key="canvasLocation" x="-663.35877862595419" y="-29.577464788732396"/>
         </scene>
         <!--loginViewController-->
         <scene sceneID="mgh-5y-Zaf">
             <objects>
                 <viewController title="loginViewController" modalPresentationStyle="fullScreen" id="YgL-yz-xha" customClass="loginViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ALD-Pg-Vjo">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="CardBoard" translatesAutoresizingMaskIntoConstraints="NO" id="y6I-Td-pLm">
-                                <rect key="frame" x="95" y="176" width="187" height="29"/>
+                                <rect key="frame" x="92" y="170" width="186" height="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="blackWhiteElement" translatesAutoresizingMaskIntoConstraints="NO" id="Vs9-uL-cQL">
-                                <rect key="frame" x="146" y="213" width="91" height="24"/>
+                                <rect key="frame" x="143" y="209" width="89" height="23"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="email_passBox" translatesAutoresizingMaskIntoConstraints="NO" id="j8p-el-R0c">
-                                <rect key="frame" x="40" y="287" width="295" height="47"/>
+                                <rect key="frame" x="37" y="283" width="298" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="email_passBox" translatesAutoresizingMaskIntoConstraints="NO" id="xJc-dp-bUD">
-                                <rect key="frame" x="40" y="338" width="295" height="47"/>
+                                <rect key="frame" x="37" y="333" width="298" height="48"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zl5-wk-2ai">
-                                <rect key="frame" x="59" y="287" width="269" height="47"/>
+                                <rect key="frame" x="50" y="283" width="273" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,7 +168,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kp2-PM-Mjz">
-                                <rect key="frame" x="59" y="338" width="269" height="47"/>
+                                <rect key="frame" x="50" y="333" width="273" height="48"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,7 +176,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHZ-Ne-6sJ">
-                                <rect key="frame" x="95" y="406" width="193" height="63"/>
+                                <rect key="frame" x="92" y="404" width="193" height="66"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Log In button"/>
@@ -158,7 +185,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vm-QK-CsX">
-                                <rect key="frame" x="133" y="469" width="110" height="36"/>
+                                <rect key="frame" x="125" y="470" width="112" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="back button"/>
@@ -167,7 +194,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxG-Fg-EIj">
-                                <rect key="frame" x="61" y="583" width="256" height="68"/>
+                                <rect key="frame" x="57" y="585" width="254" height="66"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH APPLE button"/>
@@ -176,7 +203,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMW-Mj-1eC">
-                                <rect key="frame" x="61" y="648" width="256" height="63"/>
+                                <rect key="frame" x="57" y="647" width="254" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH GOOGLE button"/>
@@ -185,7 +212,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LI-TC-Kuc">
-                                <rect key="frame" x="61" y="706" width="256" height="71"/>
+                                <rect key="frame" x="57" y="707" width="254" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH TWITTER button"/>
@@ -200,6 +227,7 @@
                     <connections>
                         <outlet property="loginEmailAddress" destination="Zl5-wk-2ai" id="RX9-9R-W3V"/>
                         <outlet property="loginPasswordField" destination="kp2-PM-Mjz" id="glb-Kg-SYY"/>
+                        <segue destination="iRA-Hs-fT3" kind="presentation" identifier="signInToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xx0-lx-239"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0r-Ko-hpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -211,58 +239,58 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Welcome to CardBoard" translatesAutoresizingMaskIntoConstraints="NO" id="bId-uO-chi">
-                                <rect key="frame" x="75" y="117" width="222" height="73"/>
+                                <rect key="frame" x="66" y="111" width="228" height="72"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="blackWhiteElement" translatesAutoresizingMaskIntoConstraints="NO" id="gTf-vG-ibN">
-                                <rect key="frame" x="130" y="190" width="108" height="29"/>
+                                <rect key="frame" x="123" y="188" width="110" height="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="909-iH-3vh">
-                                <rect key="frame" x="57" y="238" width="272" height="44"/>
+                                <rect key="frame" x="49" y="236" width="275" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="given-name"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="email_passBox" translatesAutoresizingMaskIntoConstraints="NO" id="xyy-jL-cfw">
-                                <rect key="frame" x="41" y="238" width="290" height="44"/>
+                                <rect key="frame" x="38" y="236" width="290" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iUq-qY-kvE">
-                                <rect key="frame" x="57" y="283" width="272" height="45"/>
+                                <rect key="frame" x="49" y="280" width="275" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="family-name"/>
                             </textField>
                             <textField contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a51-f2-DFW">
-                                <rect key="frame" x="57" y="334" width="272" height="40"/>
+                                <rect key="frame" x="49" y="331" width="275" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="email_passBox" translatesAutoresizingMaskIntoConstraints="NO" id="xff-gf-FaE">
-                                <rect key="frame" x="41" y="334" width="290" height="40"/>
+                                <rect key="frame" x="38" y="331" width="290" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="XsQ-Yl-vfo">
-                                <rect key="frame" x="57" y="380" width="272" height="44"/>
+                                <rect key="frame" x="49" y="378" width="275" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="email_passBox" translatesAutoresizingMaskIntoConstraints="NO" id="grE-FS-FRY">
-                                <rect key="frame" x="41" y="376" width="290" height="48"/>
+                                <rect key="frame" x="38" y="371" width="290" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-hP-o3N">
-                                <rect key="frame" x="104" y="442" width="169" height="53"/>
+                                <rect key="frame" x="100" y="440" width="171" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
@@ -275,7 +303,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WN-xH-U97">
-                                <rect key="frame" x="130" y="501" width="109" height="32"/>
+                                <rect key="frame" x="123" y="497" width="112" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="back button"/>
@@ -284,7 +312,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I95-f9-r8m">
-                                <rect key="frame" x="60" y="635" width="253" height="69"/>
+                                <rect key="frame" x="51" y="636" width="259" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH GOOGLE button"/>
@@ -293,7 +321,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTK-p3-0Wu">
-                                <rect key="frame" x="60" y="699" width="253" height="63"/>
+                                <rect key="frame" x="51" y="701" width="259" height="61"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH TWITTER button"/>
@@ -302,7 +330,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yy1-uO-7Ve">
-                                <rect key="frame" x="60" y="577" width="253" height="66"/>
+                                <rect key="frame" x="51" y="576" width="259" height="72"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Sign Up WITH APPLE button"/>
@@ -311,11 +339,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="bgEllipse" translatesAutoresizingMaskIntoConstraints="NO" id="VHb-bz-5Ku">
-                                <rect key="frame" x="-12" y="-31" width="399" height="331"/>
+                                <rect key="frame" x="-19" y="-34" width="403" height="328"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="email_passBox" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-Qn-9sW">
-                                <rect key="frame" x="38" y="287" width="296" height="41"/>
+                                <rect key="frame" x="35" y="282" width="298" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -340,23 +368,23 @@
             <objects>
                 <viewController title="addCardViewController" id="Kmt-LG-eJP" customClass="addCardViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dLb-Hn-YqB">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelection="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8P1-Dv-7k6">
-                                <rect key="frame" x="0.0" y="104" width="390" height="626"/>
+                                <rect key="frame" x="0.0" y="104" width="393" height="637"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addCardTableViewCell" rowHeight="136" id="vmQ-pY-9HM" customClass="addCardTableViewCell" customModule="CardBoard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="136"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vmQ-pY-9HM" id="P3X-FC-RRJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ddwedwe" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teV-f2-juB">
-                                                    <rect key="frame" x="197" y="11" width="167" height="114"/>
+                                                    <rect key="frame" x="197" y="11" width="170" height="114"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -394,10 +422,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWA-hl-9zV">
-                                <rect key="frame" x="121" y="756" width="148" height="35"/>
+                                <rect key="frame" x="29" y="743" width="333" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="add cards"/>
+                                <buttonConfiguration key="configuration" style="plain" image="addCardButton"/>
                                 <connections>
                                     <action selector="doneButton:" destination="Kmt-LG-eJP" eventType="touchUpInside" id="Bv5-Tr-IkB"/>
                                 </connections>
@@ -408,19 +436,19 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="8P1-Dv-7k6" id="2Hh-GI-zwS"/>
-                        <segue destination="iRA-Hs-fT3" kind="presentation" identifier="gotoHomeScreen" modalPresentationStyle="fullScreen" id="xtk-BZ-qex"/>
+                        <segue destination="iRA-Hs-fT3" kind="presentation" identifier="gotoHomeScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xtk-BZ-qex"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pym-B8-pPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="-284"/>
+            <point key="canvasLocation" x="1009.9236641221373" y="-415.49295774647891"/>
         </scene>
         <!--homeViewController-->
         <scene sceneID="3pC-xG-a01">
             <objects>
-                <viewController title="homeViewController" id="iRA-Hs-fT3" customClass="homeViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" title="homeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iRA-Hs-fT3" customClass="homeViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D1t-Bk-CQN">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-IE-Zmt">
@@ -437,7 +465,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" semanticContentAttribute="spatial" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VCS-e1-8h6">
-                                <rect key="frame" x="19" y="313" width="352" height="130"/>
+                                <rect key="frame" x="16" y="313" width="350" height="130"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -462,37 +490,148 @@
                                 <rect key="frame" x="61" y="472" width="284" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card4" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-Tb-MP1">
+                                <rect key="frame" x="57" y="616" width="276" height="252"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card2" translatesAutoresizingMaskIntoConstraints="NO" id="gZH-z7-gTc">
+                                <rect key="frame" x="40" y="635" width="307" height="251"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card3" translatesAutoresizingMaskIntoConstraints="NO" id="Z5X-Rn-YS5">
+                                <rect key="frame" x="24" y="658" width="345" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="N5w-SQ-qwO">
+                                <rect key="frame" x="13" y="678" width="367" height="232"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J2-48-oDO">
+                                <rect key="frame" x="139" y="139" width="212" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trt-tq-A4l">
+                                <rect key="frame" x="38" y="87" width="82" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="iRA-Hs-fT3" eventType="touchUpInside" id="aeP-5f-OWW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8MZ-2E-cPm"/>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="categoryPicker" destination="VCS-e1-8h6" id="LrU-fh-ehN"/>
+                        <outlet property="emailOfUser" destination="2J2-48-oDO" id="ae6-Ff-2vL"/>
+                        <outlet property="image1" destination="sE4-Tb-MP1" id="8FC-1W-BEO"/>
+                        <outlet property="image2" destination="gZH-z7-gTc" id="AfG-Z0-PJL"/>
+                        <outlet property="image3" destination="Z5X-Rn-YS5" id="8rv-fW-xBL"/>
+                        <outlet property="image4" destination="N5w-SQ-qwO" id="pZ0-bU-ylN"/>
                         <outlet property="priceGetter" destination="CVW-3E-b9b" id="y7e-Et-4Mh"/>
-                        <segue destination="SqF-YR-c5e" kind="presentation" identifier="toResultScreen" modalPresentationStyle="fullScreen" id="kX8-3b-Fqr"/>
+                        <segue destination="SqF-YR-c5e" kind="presentation" identifier="toResultScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="kX8-3b-Fqr"/>
+                        <segue destination="YgL-yz-xha" kind="presentation" identifier="logoutToSignIn" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qsV-Wi-GKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSp-Nv-tGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1707.6923076923076" y="-284.36018957345971"/>
+            <point key="canvasLocation" x="1780.916030534351" y="12.67605633802817"/>
         </scene>
         <!--resultViewController-->
         <scene sceneID="fCh-iQ-Gb2">
             <objects>
                 <viewController title="resultViewController" id="SqF-YR-c5e" customClass="resultViewController" customModule="CardBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PlE-hB-UUe">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dDD-h9-hsp">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultsTableViewCell" rowHeight="315" id="jso-KS-vJR" customClass="resultsTableViewCell" customModule="CardBoard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="315"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jso-KS-vJR" id="iI6-5l-vYE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="315"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amexPlatinum" translatesAutoresizingMaskIntoConstraints="NO" id="3rg-pY-HTJ">
+                                                    <rect key="frame" x="32" y="20" width="329" height="211"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="329" id="5uz-Oo-Fzy"/>
+                                                        <constraint firstAttribute="height" constant="211" id="YC7-fS-3za"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R38-5c-xHF">
+                                                    <rect key="frame" x="58" y="244" width="276" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="dEh-Tk-8cU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reward value and cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sn-ut-ixI">
+                                                    <rect key="frame" x="61" y="268" width="270" height="34"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="R38-5c-xHF" secondAttribute="trailing" constant="59" id="10j-RN-AJi"/>
+                                                <constraint firstItem="3rg-pY-HTJ" firstAttribute="top" secondItem="iI6-5l-vYE" secondAttribute="top" constant="20" id="44K-G1-7JP"/>
+                                                <constraint firstItem="1Sn-ut-ixI" firstAttribute="leading" secondItem="iI6-5l-vYE" secondAttribute="leading" constant="61" id="DRF-8T-3h7"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Sn-ut-ixI" secondAttribute="trailing" constant="62" id="IWb-gW-MoG"/>
+                                                <constraint firstAttribute="trailing" secondItem="3rg-pY-HTJ" secondAttribute="trailing" constant="32" id="IlG-zN-bdf"/>
+                                                <constraint firstItem="R38-5c-xHF" firstAttribute="leading" secondItem="iI6-5l-vYE" secondAttribute="leading" constant="58" id="Mm6-Zk-b7w"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Sn-ut-ixI" secondAttribute="bottom" constant="13" id="Qob-Dv-6C6"/>
+                                                <constraint firstItem="R38-5c-xHF" firstAttribute="top" secondItem="3rg-pY-HTJ" secondAttribute="bottom" constant="13" id="koJ-2A-26h"/>
+                                                <constraint firstItem="3rg-pY-HTJ" firstAttribute="leading" secondItem="iI6-5l-vYE" secondAttribute="leading" constant="32" id="pg9-3F-4cr"/>
+                                                <constraint firstItem="1Sn-ut-ixI" firstAttribute="top" secondItem="R38-5c-xHF" secondAttribute="bottom" constant="1" id="xGP-kl-FAV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardImages" destination="3rg-pY-HTJ" id="jRb-Pv-ZGO"/>
+                                            <outlet property="cardName" destination="R38-5c-xHF" id="bda-N1-HHZ"/>
+                                            <outlet property="rewardsValue" destination="1Sn-ut-ixI" id="NTD-Pc-yhz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="h2a-3D-JXw"/>
                         <color key="backgroundColor" red="0.16340669990000001" green="0.4829037189" blue="0.53227430580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="resultTableView" destination="dDD-h9-hsp" id="XuJ-EO-bPG"/>
+                        <segue destination="iRA-Hs-fT3" kind="presentation" identifier="resultToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="GmZ-qj-WuL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyI-vp-2gn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2571" y="-284"/>
+            <point key="canvasLocation" x="2778" y="13"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="xx0-lx-239"/>
+        <segue reference="qsV-Wi-GKW"/>
         <segue reference="r3G-Q3-hDa"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -505,14 +644,23 @@
         <image name="Sign Up WITH TWITTER button" width="231" height="54"/>
         <image name="Sign Up button" width="167" height="54"/>
         <image name="Welcome to CardBoard" width="211.33332824707031" height="64.333335876464844"/>
+        <image name="addCardButton" width="331" height="67"/>
         <image name="amexDeltaGold" width="141" height="88"/>
+        <image name="amexPlatinum" width="141" height="88"/>
         <image name="back button" width="108" height="31"/>
         <image name="bgEllipse" width="393" height="332"/>
         <image name="blackWhiteElement" width="91" height="23"/>
+        <image name="card1" width="1137" height="696"/>
+        <image name="card2" width="927" height="585"/>
+        <image name="card3" width="1035" height="642"/>
+        <image name="card4" width="825" height="516"/>
         <image name="email_passBox" width="296" height="43"/>
         <image name="longMainBox" width="358" height="403"/>
         <image name="resultsButton" width="227" height="86"/>
         <image name="welcomeBox" width="358" height="119"/>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -105,9 +105,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         Toast.show(message: "Coming Soon!", controller: self)
         
 //      LOGOUT TEST BUTTON
-        GIDSignIn.sharedInstance.signOut()
-        PFUser.logOut()
-        
+                
         // Refer Google SignIN
         // User Deletion
 //        let query = PFQuery(className: "User")

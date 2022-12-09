@@ -24,6 +24,7 @@
 		A86D7A4F2913951D00FDD72F /* startUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A4E2913951D00FDD72F /* startUpCollectionViewCell.swift */; };
 		A86D7A532913C4DC00FDD72F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D7A522913C4DC00FDD72F /* Toast.swift */; };
 		A879C3BA29136BBB002FF342 /* TwitterAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A879C3B929136BBB002FF342 /* TwitterAPICaller.swift */; };
+		A8984A992942F8E200067F40 /* resultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8984A982942F8E200067F40 /* resultsTableViewCell.swift */; };
 		A89C0022290BBD9C005DD3B2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89C0021290BBD9C005DD3B2 /* Social.framework */; };
 		A89C0024290BBDB0005DD3B2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89C0023290BBDAF005DD3B2 /* Accounts.framework */; };
 		A8A2B2BB291451B200E79D57 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A2B2BA291451B200E79D57 /* loginViewController.swift */; };
@@ -50,6 +51,7 @@
 		A86D7A4E2913951D00FDD72F /* startUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startUpCollectionViewCell.swift; sourceTree = "<group>"; };
 		A86D7A522913C4DC00FDD72F /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		A879C3B929136BBB002FF342 /* TwitterAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPICaller.swift; sourceTree = "<group>"; };
+		A8984A982942F8E200067F40 /* resultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultsTableViewCell.swift; sourceTree = "<group>"; };
 		A89C0021290BBD9C005DD3B2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A89C0023290BBDAF005DD3B2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A8A2B2BA291451B200E79D57 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				A8D785072939850B0079074D /* addCardViewController.swift */,
 				A826BE71293FFF6D0024AA75 /* homeViewController.swift */,
 				A84FBB7329408DDA005F2AB0 /* resultViewController.swift */,
+				A8984A982942F8E200067F40 /* resultsTableViewCell.swift */,
 			);
 			path = CardBoard;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				A86D7A4B29138DFD00FDD72F /* startUpViewController.swift in Sources */,
 				A84FBB7429408DDA005F2AB0 /* resultViewController.swift in Sources */,
 				A80D5CF92908AC6F00317904 /* AppDelegate.swift in Sources */,
+				A8984A992942F8E200067F40 /* resultsTableViewCell.swift in Sources */,
 				A86D7A4D2913930200FDD72F /* onBoardingSlide.swift in Sources */,
 				A8D785082939850B0079074D /* addCardViewController.swift in Sources */,
 				A826BE72293FFF6D0024AA75 /* homeViewController.swift in Sources */,

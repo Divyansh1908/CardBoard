@@ -25,7 +25,7 @@ class loginViewController: UIViewController, UITextFieldDelegate{
             if user != nil
             {
                 // Home Screen coming soon
-//                self.performSegue(withIdentifier: "loginToAddCards", sender: nil)
+                self.performSegue(withIdentifier: "signInToHome", sender: nil)
                 print("Manual Login Successful")
             }
             else
@@ -59,7 +59,7 @@ class loginViewController: UIViewController, UITextFieldDelegate{
                 if user != nil
                 {
                     // Home Screen Coming soon
-//                    self.performSegue(withIdentifier: "loginToAddCards", sender: nil)
+                    self.performSegue(withIdentifier: "signInToHome", sender: nil)
                     print("Google Login Successful")
                 }
                 else
